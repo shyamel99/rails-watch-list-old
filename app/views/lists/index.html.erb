@@ -1,0 +1,12 @@
+<div class="container mt-5">
+    <h1>Lists</h1>
+    <ul>List of movies</ul>
+        <% @lists.each do |list| %>
+        <li>
+            <%= link_to "#{list.name}", list_path(list) %>
+            <% end %>
+        </li>
+</div>
+<br>
+
+<h3><%= link_to "Add new list", new_list_path %></h3>
